@@ -7,6 +7,8 @@ int moving, startx, starty;
 static int elbow[] = { 0, 0 };
 static int shoulder[] = { 0, 0 };
 static int shoulder_Z[] = { 0, 0 };
+static int finger_up[] = { 0, 0 };
+static int finger_base[] = { 0, 0 };
 
 
 GLfloat angle = 0.0;   /* in degrees */
@@ -81,6 +83,141 @@ void display(void)
 
     glPopMatrix();
 
+    // START OF FINGER 1
+    glPushMatrix();
+
+    glTranslatef(2.1, 1.95, 0.1125);
+    glTranslatef(-0.1, 0, 0);
+    glRotatef(finger_base[0], 0, 0, 1);
+    glTranslatef(0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(0.1, 0, 0);
+    glTranslatef(-0.05, 0, 0);
+    glRotatef(finger_up[0], 0, 0, 1);
+    glTranslatef(0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 1
+
+
+    // START OF FINGER 2
+    glPushMatrix();
+
+    glTranslatef(2.1, 1.95, 0.0375);
+    glTranslatef(-0.1, 0, 0);
+    glRotatef(finger_base[0], 0, 0, 1);
+    glTranslatef(0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(0.1, 0, 0);
+    glTranslatef(-0.05, 0, 0);
+    glRotatef(finger_up[0], 0, 0, 1);
+    glTranslatef(0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 2
+
+    // START OF FINGER 3
+    glPushMatrix();
+
+    glTranslatef(2.1, 1.95, -0.0375);
+
+    glTranslatef(-0.1, 0, 0);
+    glRotatef(finger_base[0], 0, 0, 1);
+    glTranslatef(0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(0.1, 0, 0);
+    glTranslatef(-0.05, 0, 0);
+    glRotatef(finger_up[0], 0, 0, 1);
+    glTranslatef(0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 3
+
+
+    // START OF FINGER 4
+    glPushMatrix();
+
+    glTranslatef(2.1, 1.95, -0.1125);
+    glTranslatef(-0.1, 0, 0);
+    glRotatef(finger_base[0], 0, 0, 1);
+    glTranslatef(0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.1, 0, 0);
+    glTranslatef(-0.05, 0, 0);
+    glRotatef(finger_up[0], 0, 0, 1);
+    glTranslatef(0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 4
+
+
+    // START OF FINGER 5
+    glPushMatrix();
+    glTranslatef(2.1, 1.75, 0);
+    glTranslatef(-0.1, 0, 0);
+    glRotatef(-finger_base[0], 0, 0, 1);
+    glTranslatef(0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(0.1, 0, 0);
+    glTranslatef(-0.05, 0, 0);
+    glRotatef(-finger_up[0], 0, 0, 1);
+    glTranslatef(0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 5
 
     // END OF RIGHT ARM
 
@@ -116,6 +253,142 @@ void display(void)
     glPopMatrix();
 
     glPopMatrix();
+
+    // START OF FINGER 1
+    glPushMatrix();
+
+    glTranslatef(-2.1, 1.95, 0.1125);
+    glTranslatef(0.1, 0, 0);
+    glRotatef(finger_base[1], 0, 0, 1);
+    glTranslatef(-0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(-0.1, 0, 0);
+    glTranslatef(0.05, 0, 0);
+    glRotatef(finger_up[1], 0, 0, 1);
+    glTranslatef(-0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 1
+
+
+    // START OF FINGER 2
+    glPushMatrix();
+
+    glTranslatef(-2.1, 1.95, 0.0375);
+    glTranslatef(0.1, 0, 0);
+    glRotatef(finger_base[1], 0, 0, 1);
+    glTranslatef(-0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-0.1, 0, 0);
+    glTranslatef(0.05, 0, 0);
+    glRotatef(finger_up[1], 0, 0, 1);
+    glTranslatef(-0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 2
+
+    // START OF FINGER 3
+    glPushMatrix();
+
+    glTranslatef(-2.1, 1.95, -0.0375);
+    glTranslatef(0.1, 0, 0);
+    glRotatef(finger_base[1], 0, 0, 1);
+    glTranslatef(-0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-0.1, 0, 0);
+    glTranslatef(0.05, 0, 0);
+    glRotatef(finger_up[1], 0, 0, 1);
+    glTranslatef(-0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 3
+
+
+    // START OF FINGER 4
+    glPushMatrix();
+
+    glTranslatef(-2.1, 1.95, -0.1125);
+    glTranslatef(0.1, 0, 0);
+    glRotatef(finger_base[1], 0, 0, 1);
+    glTranslatef(-0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(-0.1, 0, 0);
+    glTranslatef(0.05, 0, 0);
+    glRotatef(finger_up[1], 0, 0, 1);
+    glTranslatef(-0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 4
+
+
+    // START OF FINGER 5
+    glPushMatrix();
+
+    glTranslatef(-2.1, 1.75, 0);
+    glTranslatef(0.1, 0, 0);
+    glRotatef(-finger_base[1], 0, 0, 1);
+    glTranslatef(-0.1, 0, 0);
+    glPushMatrix();
+    glScalef(0.2, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(-0.1, 0, 0);
+    glTranslatef(0.05, 0, 0);
+    glRotatef(-finger_up[1], 0, 0, 1);
+    glTranslatef(-0.05, 0, 0);
+    glScalef(0.1, 0.1, 0.05);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    // END OF FINGER 5
+
+
     // END OF LEFT ARM
 
     glPopMatrix();
@@ -221,6 +494,63 @@ void keyboard(unsigned char key, int x, int y)
     case 'X':
         if (shoulder_Z[1] > -90) {
             shoulder_Z[1] = (shoulder_Z[1] - 5) % 360;
+            glutPostRedisplay();
+        }
+        break;
+
+    //finger_up movement
+    case 'q':
+        if (finger_base[1] < 20) {
+            finger_base[1] = (finger_base[1] + 5) % 360;
+            glutPostRedisplay();
+        }
+        break;
+
+    case 'Q':
+        if (finger_base[1] > -20) {
+            finger_base[1] = (finger_base[1] - 5) % 360;
+            glutPostRedisplay();
+        }
+        break;
+
+    case 'w':
+        if (finger_up[1] < 20) {
+            finger_up[1] = (finger_up[1] + 5) % 360;
+            glutPostRedisplay();
+        }
+        break;
+
+    case 'W':
+        if (finger_up[1] > -20) {
+            finger_up[1] = (finger_up[1] - 5) % 360;
+            glutPostRedisplay();
+        }
+        break;
+
+    case 'i':
+        if (finger_base[0] < 20) {
+            finger_base[0] = (finger_base[0] + 5) % 360;
+            glutPostRedisplay();
+        }
+        break;
+
+    case 'I':
+        if (finger_base[0] > -20) {
+            finger_base[0] = (finger_base[0] - 5) % 360;
+            glutPostRedisplay();
+        }
+        break;
+
+    case 'o':
+        if (finger_up[0] < 20) {
+            finger_up[0] = (finger_up[0] + 5) % 360;
+            glutPostRedisplay();
+        }
+        break;
+
+    case 'O':
+        if (finger_up[0] > -20) {
+            finger_up[0] = (finger_up[0] - 5) % 360;
             glutPostRedisplay();
         }
         break;
