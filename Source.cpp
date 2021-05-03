@@ -81,12 +81,12 @@ void display(void)
     glutWireCube(1.0);
     glPopMatrix();
 
-    glPopMatrix();
+    
 
     // START OF FINGER 1
     glPushMatrix();
 
-    glTranslatef(2.1, 1.95, 0.1125);
+    glTranslatef(0.45, 0.05, 0.1125);
     glTranslatef(-0.1, 0, 0);
     glRotatef(finger_base[0], 0, 0, 1);
     glTranslatef(0.1, 0, 0);
@@ -114,7 +114,7 @@ void display(void)
     // START OF FINGER 2
     glPushMatrix();
 
-    glTranslatef(2.1, 1.95, 0.0375);
+    glTranslatef(0.45, 0.05, 0.0375);
     glTranslatef(-0.1, 0, 0);
     glRotatef(finger_base[0], 0, 0, 1);
     glTranslatef(0.1, 0, 0);
@@ -141,7 +141,7 @@ void display(void)
     // START OF FINGER 3
     glPushMatrix();
 
-    glTranslatef(2.1, 1.95, -0.0375);
+    glTranslatef(0.45, 0.05, -0.0375);
 
     glTranslatef(-0.1, 0, 0);
     glRotatef(finger_base[0], 0, 0, 1);
@@ -170,7 +170,7 @@ void display(void)
     // START OF FINGER 4
     glPushMatrix();
 
-    glTranslatef(2.1, 1.95, -0.1125);
+    glTranslatef(0.45, 0.05, -0.1125);
     glTranslatef(-0.1, 0, 0);
     glRotatef(finger_base[0], 0, 0, 1);
     glTranslatef(0.1, 0, 0);
@@ -195,7 +195,7 @@ void display(void)
 
     // START OF FINGER 5
     glPushMatrix();
-    glTranslatef(2.1, 1.75, 0);
+    glTranslatef(0.475, -0.1, 0);
     glTranslatef(-0.1, 0, 0);
     glRotatef(-finger_base[0], 0, 0, 1);
     glTranslatef(0.1, 0, 0);
@@ -219,6 +219,7 @@ void display(void)
 
     // END OF FINGER 5
 
+    glPopMatrix();
     // END OF RIGHT ARM
 
 
@@ -252,12 +253,12 @@ void display(void)
     glutWireCube(1.0);
     glPopMatrix();
 
-    glPopMatrix();
+   
 
     // START OF FINGER 1
     glPushMatrix();
 
-    glTranslatef(-2.1, 1.95, 0.1125);
+    glTranslatef(-0.475, 0.05, 0.1125);
     glTranslatef(0.1, 0, 0);
     glRotatef(finger_base[1], 0, 0, 1);
     glTranslatef(-0.1, 0, 0);
@@ -285,7 +286,7 @@ void display(void)
     // START OF FINGER 2
     glPushMatrix();
 
-    glTranslatef(-2.1, 1.95, 0.0375);
+    glTranslatef(-0.475, 0.05, 0.0375);
     glTranslatef(0.1, 0, 0);
     glRotatef(finger_base[1], 0, 0, 1);
     glTranslatef(-0.1, 0, 0);
@@ -310,7 +311,7 @@ void display(void)
     // START OF FINGER 3
     glPushMatrix();
 
-    glTranslatef(-2.1, 1.95, -0.0375);
+    glTranslatef(-0.475, 0.05, -0.0375);
     glTranslatef(0.1, 0, 0);
     glRotatef(finger_base[1], 0, 0, 1);
     glTranslatef(-0.1, 0, 0);
@@ -336,7 +337,7 @@ void display(void)
     // START OF FINGER 4
     glPushMatrix();
 
-    glTranslatef(-2.1, 1.95, -0.1125);
+    glTranslatef(-0.475, 0.05, -0.1125);
     glTranslatef(0.1, 0, 0);
     glRotatef(finger_base[1], 0, 0, 1);
     glTranslatef(-0.1, 0, 0);
@@ -364,7 +365,7 @@ void display(void)
     // START OF FINGER 5
     glPushMatrix();
 
-    glTranslatef(-2.1, 1.75, 0);
+    glTranslatef(-0.475, -0.1, 0);
     glTranslatef(0.1, 0, 0);
     glRotatef(-finger_base[1], 0, 0, 1);
     glTranslatef(-0.1, 0, 0);
@@ -388,7 +389,7 @@ void display(void)
 
     // END OF FINGER 5
 
-
+    glPopMatrix();
     // END OF LEFT ARM
 
     glPopMatrix();
