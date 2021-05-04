@@ -9,6 +9,10 @@ static int shoulder[] = { 0, 0 };
 static int shoulder_Z[] = { 0, 0 };
 static int finger_up[] = { 0, 0 };
 static int finger_base[] = { 0, 0 };
+static int legR[] ={0,0};
+static int legL[] ={0,0};
+static int knee[]={0 ,0};
+
 
 
 GLfloat angle = 0.0;   /* in degrees */
@@ -45,6 +49,75 @@ void display(void)
     glutWireCube(1.0);
     glPopMatrix();
     // END OF STOMACH
+
+    // START OF RIGHT LEG
+    glPushMatrix();
+
+    glTranslatef(0.1, 0.0, 0.0);
+    glRotatef((GLfloat)legR[0], 0.0, 0.0, 1.0);
+    glTranslatef(-0.1, -0.25, 0.0);
+
+    glRotatef((GLfloat)legL[0], 1.0, 0.0, 0.0);
+    glTranslatef(0.3, -0.5, 0.0);
+
+    glPushMatrix();
+    glScalef (0.4, 1.5, 0.5);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+    glTranslatef(0.0, -0.75, 0.0);
+    glRotatef(GLfloat (knee[0]), 1.0, 0.0, 0.0);
+    glTranslatef(0.0, -0.5, 0.0);
+    glPushMatrix();
+    glScalef (0.4, 1.0, 0.5);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glTranslatef(0.0, -0.625, 0.0);
+    glPushMatrix();
+    glScalef (0.5, 0.25, 0.9);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+    // END OF RIGHT LEG
+
+    //START OF LEFT LEG
+    glPushMatrix();
+
+    glTranslatef(-0.1, 0.0, 0.0);
+    glRotatef((GLfloat)legR[1], 0.0, 0.0, 1.0);
+    glTranslatef(0.1, -0.25, 0.0);
+
+    glRotatef((GLfloat)legL[1], 1.0, 0.0, 0.0);
+    glTranslatef(-0.29, -0.5, 0.0);
+
+    glPushMatrix();
+    glScalef (0.4, 1.5, 0.5);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+
+    glTranslatef(0.0, -0.75, 0.0);
+    glRotatef(GLfloat (knee[1]), 1.0, 0.0, 0.0);
+    glTranslatef(0.0, -0.5, 0.0);
+    glPushMatrix();
+    glScalef (0.4, 1.0, 0.5);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glTranslatef(0.0, -0.625, 0.0);
+    glPushMatrix();
+    glScalef (0.5, 0.25, 0.9);
+    glutWireCube(1.0);
+    glPopMatrix();
+
+    glPopMatrix();
+
+    //END OF LEFT LEG
+    
+
 
     // START OF HEAD
     glPushMatrix();
@@ -411,6 +484,82 @@ void reshape(int w, int h)
 void keyboard(unsigned char key, int x, int y)
 {
     switch (key) {
+    //LEGS MOVMENT
+    case 'k':
+    if(legL[1] >= -70){
+        legL[1] = (legL[1]-5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 'K':
+    if(legL[1] <= 70){
+        legL[1] = (legL[1]+5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 'j':
+    if(legR[1]>= -70){
+        legR[1]  = (legR[1]-5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 'J':
+    if(legR[1]<= 2){
+        legR[1]  = (legR[1]+5) %360;
+        glutPostRedisplay();
+    }
+    break;
+
+
+    case 'l':
+    if(legL[0] >= -70){
+        legL[0] = (legL[0]-5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 'L':
+    if(legL[0] <= 70){
+        legL[0] = (legL[0]+5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 'P':
+    if(legR[0]>= -2){
+        legR[0]  = (legR[0]-5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 'p':
+    if(legR[0]<= 70){
+        legR[0]  = (legR[0]+5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    //KNEE MOVMENTS
+    case 'y':
+    if(knee[0] <=70){
+        knee[0] = (knee[0]+5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 'Y':
+    if(knee[0] >=-15){
+        knee[0] = (knee[0]-5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 't':
+    if(knee[1] <=70){
+        knee[1] = (knee[1]+5) %360;
+        glutPostRedisplay();
+    }
+    break;
+    case 'T':
+    if(knee[1] >=-15){
+        knee[1] = (knee[1]-5) %360;
+        glutPostRedisplay();
+    }
+    break;
 
        // shoulder MOVEMENT
     case 's':
