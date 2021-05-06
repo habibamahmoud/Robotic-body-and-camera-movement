@@ -1,3 +1,6 @@
+// $ gcc -o source Source.cpp -lGL -lGLU -lglut -lm
+// $ ./source
+
 #include <stdlib.h>
 #include <GL/glut.h>
 #include <math.h>
@@ -624,6 +627,13 @@ void display(void)
     glutSwapBuffers();
 
 }
+void reset()
+{
+	double e[] = {0.0, 0.0, 5.0};
+	double c[] = {0.0, 0.0, 0.0};
+	double u[] = {0.0, 1.0, 0.0};
+	
+}
 
 void specialKeys(int key, int x, int y)
 {
@@ -894,13 +904,21 @@ void keyboard(unsigned char key, int x, int y)
             glutPostRedisplay();
         }
         break;
+    case 'n':
+     glutPostRedisplay();
 
+		reset();
+      
+		break;
+    
     case 27:
         exit(0);
+        
         break;
     default:
         break;
     }
+       
 }
 
 
